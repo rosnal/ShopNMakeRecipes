@@ -13,6 +13,9 @@ import { HighlightDirective } from './shared/directives/highlight.directive';
 import { UnlessDirective } from './shared/directives/unless.directive';
 import { DropdownDirective } from './shared/directives/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RoutingModule } from './app-routing.module';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,14 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     ShoppingEditComponent,
     HighlightDirective,
     UnlessDirective,
-    DropdownDirective
+    DropdownDirective,
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RoutingModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

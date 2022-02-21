@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 
@@ -9,13 +9,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() headerselect = new EventEmitter<string>();
+
   collapsed = true;
   constructor() { }
 
   ngOnInit(): void {
   }
-  onHeaderClick(text : string){
-    this.headerselect.emit(text);
-  }
+
 }
